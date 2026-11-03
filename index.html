@@ -1,0 +1,461 @@
+<!doctype html>
+<!--
+  Maram Mohammed · Portfolio
+  One static page, no build step. Content lives here, styles in css/style.css,
+  behavior in js/main.js. Edit contact links in the CONFIG block of js/main.js.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Maram Almaohgra · Product Engineer</title>
+  <meta name="description" content="Maram Almaohgra, Product Engineer focused on Arabic AI and search. I turn complex technology into simple, useful products.">
+  <meta name="author" content="Maram Almaohgra">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#080a0f" media="(prefers-color-scheme: dark)">
+
+  <!-- Social previews -->
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://maramalmaohgra.com/">
+  <meta property="og:url" content="https://maramalmaohgra.com/">
+  <meta property="og:title" content="Maram Almaohgra · Product Engineer">
+  <meta property="og:description" content="Arabic AI and search. Simple to use, hard to make.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Apply the saved theme before first paint, so dark-mode visitors don't see a light flash -->
+  <script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<!-- Icon sprite: each icon is a <symbol>, used via <svg><use href="#id"/></svg> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M15 14.5a5 5 0 0 1 6 5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></symbol>
+  <symbol id="i-ear" viewBox="0 0 24 24"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-6 0"/><path d="M10 9a2 2 0 0 1 4 0"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+  <symbol id="i-branch" viewBox="0 0 24 24"><path d="M6 3v12"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 16h.01M12 16h.01M15.5 16h.01"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3v19M12 21h8V9l-8-3M3 21h18M8 8h.01M8 12h.01M8 16h.01M16 12h.01M16 16h.01"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+</svg>
+
+<!-- ========== HEADER ========== -->
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#top"><span class="scales" aria-hidden="true"><i></i><i></i></span>Maram</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#process">Process</a>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" type="button" id="themeBtn" aria-label="Switch light or dark mode">
+        <svg class="i sun"><use href="#i-sun"/></svg><svg class="i moon"><use href="#i-moon"/></svg>
+      </button>
+      <a class="btn dark" href="#contact">Let's talk</a>
+    </div>
+  </header>
+</div>
+
+<!-- ========== HOME VIEW ========== -->
+<main id="home">
+<div class="wrap">
+  <div class="hero" id="top">
+    <div class="hero-text">
+      <p class="hi">Hi, I'm</p>
+      <div class="name"><h1>Maram<br>Almaohgra</h1><span lang="ar" dir="rtl">مرام المهجرع</span></div>
+      <p class="role">Product Engineer · <b>Arabic AI &amp; Search</b></p>
+      <p class="tagline">I turn complex technology into simple, useful products.</p>
+      <div class="actions">
+        <a class="btn primary" href="#work">View my work <svg class="i"><use href="#i-arrow"/></svg></a>
+        <button class="btn" type="button" id="heroCopy"><svg class="i"><use href="#i-copy"/></svg>Copy email</button>
+      </div>
+    </div>
+    <div class="stage">
+      <canvas id="swarm" role="img" aria-label="Blue and teal points gathering into a butterfly"></canvas>
+      <small>Hover the wings · tap to scatter</small>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="motto">
+      <p lang="ar" dir="rtl">السهل الممتنع</p>
+      <p>Simple to use. Hard to make.</p>
+    </div>
+    <div class="about-text">
+      <div class="h2"><h2>About me</h2><span class="scales"><i></i><i></i></span></div>
+      <p>Computer engineering and psychology graduate. My philosophy is simple, useful things: products that feel obvious because someone did the hard thinking first.</p>
+      <div class="traits">
+        <div class="trait"><span class="ico"><svg class="i"><use href="#i-compass"/></svg></span>Product thinking</div>
+        <div class="trait"><span class="ico"><span class="ar" lang="ar" dir="rtl">ض</span></span>Arabic AI</div>
+        <div class="trait"><span class="ico"><svg class="i"><use href="#i-user"/></svg></span>User first</div>
+        <div class="trait"><span class="ico"><svg class="i"><use href="#i-code"/></svg></span>Builder</div>
+        <div class="trait"><span class="ico"><svg class="i"><use href="#i-bulb"/></svg></span>Psychology lens</div>
+        <div class="trait"><span class="ico"><svg class="i"><use href="#i-team"/></svg></span>Team player</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="flush">
+  <div class="wrap">
+    <div class="head-row"><div class="h2"><h2>Tools I use</h2><span class="scales"><i></i><i></i></span></div></div>
+    <div class="tiles">
+      <div class="tile"><b class="mono-mark">Py</b><span>Python</span></div>
+      <div class="tile"><b class="mono-mark">Re</b><span>React</span></div>
+      <div class="tile"><b class="mono-mark">JS</b><span>Node.js</span></div>
+      <div class="tile"><b class="mono-mark">SQL</b><span>SQL</span></div>
+      <div class="tile"><b class="mono-mark">Git</b><span>Git &amp; GitHub</span></div>
+      <div class="tile"><b class="mono-mark">SM</b><span>SageMaker</span></div>
+      <div class="tile"><b class="mono-mark">OS</b><span>OpenSearch</span></div>
+      <div class="tile"><b class="mono-mark">As</b><span>Astro</span></div>
+      <div class="tile"><b class="mono-mark">Mi</b><span>Miro</span></div>
+      <div class="tile"><b class="mono-mark">No</b><span>Notion</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="flush">
+  <div class="wrap">
+    <div class="head-row"><div class="h2"><h2>Selected work</h2><span class="scales"><i></i><i></i></span></div></div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="visual">
+          <span class="badge live">Launched</span>
+          <div class="search-mock" aria-hidden="true">
+            <div class="sbar"><svg class="i"><use href="#i-search"/></svg><span class="q" id="mq" lang="ar" dir="rtl"></span><span class="caret"></span></div>
+            <div class="hit" id="mhit"><span class="w" id="mw" lang="ar" dir="rtl"></span><span class="tag">Top match</span></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-title"><h3>Arabic meaning search</h3><a class="stretch" href="#dictionary" aria-label="Read the Arabic meaning search case study"><svg class="i"><use href="#i-arrow"/></svg></a></div>
+          <p>Find a word by describing what it means. Rebuilt as RAG: from 9s+ to under 3s.</p>
+          <span class="read">Read case study</span>
+          <div class="meta"><span>Embeddings</span><span>OpenSearch</span><span>SageMaker</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">
+          <span class="badge">Prototype</span>
+          <svg viewBox="0 0 320 180" aria-hidden="true">
+            <rect x="110" y="10" width="100" height="164" rx="16" class="f-bg s-fg" stroke-width="2"/>
+            <rect x="126" y="30" width="68" height="94" rx="4" class="f-soft"/>
+            <g class="s-muted" stroke-width="2" stroke-linecap="round"><path d="M136 46h40M136 58h30M136 70h44M136 82h24M136 94h36"/></g>
+            <path d="M126 124l6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 2-2" class="s-blue" fill="none" stroke-width="2"/>
+            <rect x="120" y="28" width="80" height="3" rx="1.5" class="f-teal scan"/>
+            <rect x="126" y="136" width="30" height="14" rx="7" class="f-blue"/>
+            <rect x="160" y="136" width="34" height="14" rx="7" class="f-tsoft"/>
+            <g class="f-fg"><circle cx="160" cy="162" r="3"/></g>
+            <rect x="228" y="44" width="70" height="30" rx="10" class="f-bg s-line" stroke-width="1.5"/>
+            <circle cx="244" cy="59" r="6" class="f-teal"/><path d="M256 55h30M256 63h20" class="s-muted" stroke-width="2" stroke-linecap="round"/>
+            <rect x="22" y="96" width="70" height="30" rx="10" class="f-bg s-line" stroke-width="1.5"/>
+            <circle cx="38" cy="111" r="6" class="f-blue"/><path d="M50 107h30M50 115h20" class="s-muted" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title"><h3>InPocket</h3><a class="stretch" href="#inpocket" aria-label="Read the InPocket case study"><svg class="i"><use href="#i-arrow"/></svg></a></div>
+          <p>AI receipt scanning for field-service companies. Spec, pricing and launch plan.</p>
+          <span class="read">Read case study</span>
+          <div class="meta"><span>PRD</span><span>Pricing</span><span>Go-to-market</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">
+          <span class="badge">Notebook</span>
+          <svg viewBox="0 0 320 180" aria-hidden="true">
+            <circle cx="160" cy="90" r="78" class="f-bg s-line" stroke-width="2"/>
+            <circle cx="160" cy="90" r="62" class="f-bg s-line" stroke-width="1.5"/>
+            <path d="M118 72c8-20 34-26 48-12 10 10 2 30-16 32-18 2-38-4-32-20z" class="f-blue" opacity=".9"/>
+            <path d="M168 104c10-14 36-12 40 4 4 14-12 26-28 22-14-4-20-14-12-26z" class="f-teal" opacity=".9"/>
+            <path d="M176 52c12-6 28 0 26 14-2 10-16 14-26 8-8-6-10-16 0-22z" class="f-fg" opacity=".85"/>
+            <path d="M120 112c6-6 20-6 24 2 4 8-4 16-14 14-10-2-16-10-10-16z" class="f-tsoft s-teal" stroke-width="1.5"/>
+            <g class="s-muted" stroke-width="1.2" stroke-dasharray="3 3" fill="none"><path d="M60 40h40l18 22"/><path d="M262 140h-40l-14-12"/></g>
+            <rect x="22" y="30" width="38" height="16" rx="8" class="f-blue"/><rect x="262" y="132" width="38" height="16" rx="8" class="f-teal"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title"><h3>Food segmentation</h3></div>
+          <p>Labeling every pixel of a meal photo with DeepLabv3+. mIoU rose from ~63 to ~84.</p>
+          <div class="meta"><span>Deep learning</span><span>DeepLabv3+</span><span>Colab</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">
+          <span class="badge live">Live</span>
+          <svg viewBox="0 0 320 180" aria-hidden="true">
+            <rect x="60" y="14" width="200" height="152" rx="14" class="f-bg s-fg" stroke-width="2"/>
+            <path d="M60 40h200" class="s-line" stroke-width="2"/>
+            <g class="f-fg"><circle cx="76" cy="27" r="3.5"/><circle cx="88" cy="27" r="3.5" opacity=".5"/><circle cx="100" cy="27" r="3.5" opacity=".3"/></g>
+            <path d="M246 22a6 6 0 1 0 6 8 5 5 0 0 1-6-8z" class="f-blue"/>
+            <rect x="160" y="56" width="84" height="12" rx="4" class="f-blue"/>
+            <g class="s-muted" stroke-width="3" stroke-linecap="round"><path d="M244 84h-120M244 98h-96M244 112h-110M244 126h-70"/></g>
+            <rect x="76" y="80" width="38" height="50" rx="6" class="f-tsoft"/>
+            <rect x="200" y="142" width="44" height="12" rx="6" class="f-teal"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title"><h3>My Arabic blog</h3><a id="blogLink" aria-label="Open my blog"><svg class="i"><use href="#i-out"/></svg></a></div>
+          <p>Right-to-left, dark mode, and live on every push. Built to stay cheap and mine.</p>
+          <div class="meta"><span>Astro</span><span>Markdown</span><span>GitHub Actions</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="flush">
+  <div class="wrap">
+    <div class="head-row"><div class="h2"><h2>Experience</h2><span class="scales"><i></i><i></i></span></div></div>
+    <div class="timeline">
+      <div class="step">
+        <span class="dot"><svg class="i"><use href="#i-spark"/></svg></span>
+        <div><span class="when">Jul – Dec 2025</span><h3>AI Engineer</h3><span class="where">Arabic dictionary platform</span><p>Owned the semantic search system end to end.</p></div>
+      </div>
+      <div class="step">
+        <span class="dot"><svg class="i"><use href="#i-compass"/></svg></span>
+        <div><span class="when">Aug – Oct 2026</span><h3>Product Management</h3><span class="where">CorePro · Istanbul</span><p>120-hour program, capstone at Demo Day.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="flush">
+  <div class="wrap">
+    <div class="head-row"><div class="h2"><h2>How I work</h2><span class="scales"><i></i><i></i></span></div></div>
+    <div class="process">
+      <div class="p-step"><span class="ring"><svg class="i"><use href="#i-ear"/></svg></span><div><span class="n">01</span><h3>Listen</h3><p>Learn the problem from the people who have it.</p></div></div>
+      <div class="p-step"><span class="ring"><svg class="i"><use href="#i-target"/></svg></span><div><span class="n">02</span><h3>Define success</h3><p>Agree on what a good result looks like.</p></div></div>
+      <div class="p-step"><span class="ring"><svg class="i"><use href="#i-code"/></svg></span><div><span class="n">03</span><h3>Build an MVP</h3><p>Ship the smallest version that tests the idea.</p></div></div>
+      <div class="p-step"><span class="ring"><svg class="i"><use href="#i-chart"/></svg></span><div><span class="n">04</span><h3>Measure</h3><p>Watch what the data and users show.</p></div></div>
+      <div class="p-step"><span class="ring"><svg class="i"><use href="#i-branch"/></svg></span><div><span class="n">05</span><h3>Decide</h3><p>Build it for real, or change the solution.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let's build something <span>simple and useful</span>.</h2>
+    <div class="c-side">
+    <div class="c-list">
+      <div class="c-item"><svg class="i"><use href="#i-mail"/></svg><a class="email" id="email"></a><button class="copy" type="button" id="copyBtn">Copy</button></div>
+      <div class="c-item"><svg class="i"><use href="#i-pin"/></svg><span>Riyadh · Istanbul · Remote</span></div>
+    </div>
+    <div class="socials">
+      <a id="liLink" aria-label="LinkedIn">in</a>
+      <a id="ghLink" aria-label="GitHub" title="GitHub"><span class="gh-ico" aria-hidden="true"></span></a>
+    </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ========== CASE STUDY: Arabic meaning search ========== -->
+<article class="case wrap" id="dictionary" hidden>
+  <a class="back" href="#work"><svg class="i"><use href="#i-back"/></svg>All work</a>
+  <div class="c-hero">
+    <span class="eyebrow">Case study · Shipped</span>
+    <h1 tabindex="-1">Searching an Arabic dictionary by meaning</h1>
+    <p>A RAG-based search that helps writers and translators find the word for a meaning they have in mind.</p>
+    <div class="facts">
+      <div class="fact"><small>Role</small><span>AI Engineer</span></div>
+      <div class="fact"><small>Team</small><span>2 engineers, linguists, a designer</span></div>
+      <div class="fact"><small>When</small><span>Jul – Dec 2025</span></div>
+      <div class="fact"><small>Stack</small><span>Python · SageMaker · OpenSearch</span></div>
+    </div>
+  </div>
+
+  <div class="big">
+    <div><b>1,000+</b><small>Searches in the first week (approx.)</small></div>
+    <div><b>9s+ <span>→</span> &lt;3s</b><small>Typical response time (informal testing)</small></div>
+    <div><b>3,500 <span>→</span> 100</b><small>Lines sent to the LLM per query (approx.)</small></div>
+  </div>
+
+  <div class="pipe-wrap" role="img" aria-label="Search pipeline: user query, embedding, vector search for the closest 100 titles, LLM picks the best match, result">
+    <div class="pipe">
+      <div class="node"><b>User query</b><small>A meaning, in Arabic</small></div>
+      <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span>
+      <div class="node"><b>Embedding</b><small>The query becomes a vector</small></div>
+      <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span>
+      <div class="node hl"><b>Vector search</b><small>Closest 100 titles</small></div>
+      <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span>
+      <div class="node"><b>LLM</b><small>Picks the best match, returns IDs only</small></div>
+      <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span>
+      <div class="node"><b>Result</b><small>A real chapter and entries</small></div>
+    </div>
+  </div>
+
+  <div class="c-main">
+    <div class="c-sec">
+      <div class="c-label"><h2>The problem</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <p>Writers, translators and researchers sometimes know exactly what they mean, but not the word for it.</p>
+        <div class="who">
+          <div><span class="ico"><svg class="i"><use href="#i-search"/></svg></span><b>A regular dictionary</b><p>Needs the word before you can look it up.</p></div>
+          <div><span class="ico"><svg class="i"><use href="#i-spark"/></svg></span><b>A general chatbot</b><p>Can answer, but may invent a word that doesn't exist.</p></div>
+          <div><span class="ico"><svg class="i"><use href="#i-shield"/></svg></span><b>This search</b><p>Every result comes from the dictionary's own entries.</p></div>
+        </div>
+        <p class="muted">The linguistics team confirmed the gap, and language specialists said solving it matters.</p>
+      </div>
+    </div>
+
+    <div class="c-sec">
+      <div class="c-label"><h2>My role</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <p>The first version sent every chapter and entry title to an LLM on each query. It was too slow to be practical, so I proposed rebuilding it as RAG and owned the decisions behind it.</p>
+        <ul class="ticks">
+          <li>Defined what a good result looks like with a linguist, and used our lists of search terms and expected results to compare options.</li>
+          <li>Made every result a real entry: the LLM returns only IDs in a fixed format, and the text comes from the database. Inputs are checked for length and malicious code.</li>
+          <li>Covered the full-stack work: search filters, the onboarding tour and the contact flow.</li>
+          <li>Proposed smart suggestions that show the closest match instead of "no related result".</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="c-sec">
+      <div class="c-label"><h2>Three decisions</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <div class="decisions">
+          <div class="dec"><span class="n">1</span><h3>An open-source Arabic embedding model, not an API</h3><p>Tested three models on the linguists' word pairs and picked the most accurate. Hosting it on SageMaker took an outside API out of the request path and gave a fixed running cost.</p><div class="gave"><b>Gave up</b>Easy setup</div></div>
+          <div class="dec"><span class="n">2</span><h3>Embed titles and chapter names, not explanations</h3><p>Titles carry a chapter's meaning; long explanations could blur it. Results were already good, so we launched on time.</p><div class="gave"><b>Gave up</b>More testing before launch</div></div>
+          <div class="dec"><span class="n">3</span><h3>Query processing in the backend</h3><p>SageMaker only hosts the embedding model, on the smallest instance that worked, to keep cost low.</p><div class="gave"><b>Gave up</b>Everything in one managed service</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-sec">
+      <div class="c-label"><h2>What I'd test next</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <p>The LLM only sees the closest 100 results. If the right chapter isn't in that list, it can't pick it. I'd run my test searches through vector search alone and record where the correct chapter lands.</p>
+        <div class="ruler">
+          <div class="ruler-bar" aria-hidden="true"></div>
+          <div class="ruler-ticks"><span>Top 100</span><span>Top 200</span><span>Top 300</span></div>
+          <p>Most within 100: improve the LLM prompt. Many further down: send more results, or change what gets embedded.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-sec">
+      <div class="c-label"><h2>Honest label</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <div class="honest"><svg class="i"><use href="#i-shield"/></svg><p>Real product with real users. No formal benchmark dataset: quality was judged with the linguists' lists and review. Usage figures are approximate, response times were measured informally, and cost savings are expected, not measured.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-end">
+    <a class="btn primary" href="assets/case-studies/dictionary-case-study.pdf" target="_blank" rel="noopener"><svg class="i"><use href="#i-file"/></svg>Full case study (PDF)</a>
+    <a class="btn" href="#inpocket">Next: InPocket <svg class="i"><use href="#i-arrow"/></svg></a>
+  </div>
+</article>
+
+<!-- ========== CASE STUDY: InPocket ========== -->
+<article class="case wrap" id="inpocket" hidden>
+  <a class="back" href="#work"><svg class="i"><use href="#i-back"/></svg>All work</a>
+  <div class="c-hero">
+    <span class="eyebrow">Product case study · Course project</span>
+    <h1 tabindex="-1">InPocket</h1>
+    <p>A tool for field-service companies that reads receipts with AI, so they stop losing them and stop typing them in by hand.</p>
+    <div class="facts">
+      <div class="fact"><small>Team</small><span>Squad of 5, no fixed titles</span></div>
+      <div class="fact"><small>Program</small><span>CorePro, 120 hours</span></div>
+      <div class="fact"><small>Output</small><span>HTML prototype + landing page</span></div>
+    </div>
+  </div>
+
+  <div class="c-main">
+    <div class="c-sec">
+      <div class="c-label"><h2>The problem</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <p>Receipts get lost, retyped by hand, or guessed. Each of those hurts someone different.</p>
+        <div class="who">
+          <div><span class="ico"><svg class="i"><use href="#i-calc"/></svg></span><b>The accountant</b><p>Enters every receipt into the system by hand.</p></div>
+          <div><span class="ico"><svg class="i"><use href="#i-user"/></svg></span><b>The field worker</b><p>Pays out of pocket when a receipt is lost.</p></div>
+          <div><span class="ico"><svg class="i"><use href="#i-building"/></svg></span><b>The company</b><p>Keeps records built on guesses and typos.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-sec">
+      <div class="c-label"><h2>My role</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <p>We decided most things together. I took part in every stage; these are the parts I worked on most.</p>
+        <div class="areas">
+          <div class="area"><b>Product</b><span>MVP scope, PRD with acceptance criteria, backlog, Now / Next / Later roadmap, where AI should and shouldn't be used</span></div>
+          <div class="area"><b>Metrics</b><span>Experiment spec, success and failure in numbers</span></div>
+          <div class="area"><b>Pricing</b><span>Business model, cost per seat, price tiers, pricing test</span></div>
+          <div class="area"><b>Launch</b><span>Go-to-market plan with an Arabic sales script, readiness checklist, FAQ, growth plan</span></div>
+          <div class="area"><b>Research</b><span>Ran a user interview</span></div>
+          <div class="area"><b>Design</b><span>Helped design the MVP wireframes</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-sec">
+      <div class="c-label"><h2>Three decisions</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <div class="decisions">
+          <div class="dec"><span class="n">1</span><h3>Scanner first</h3><p>The full idea also tracked field visits. We built only the scanner to prove one thing first, and left out accounting exports until we knew which systems our customers used.</p><div class="gave"><b>Gave up</b>Visit tracking and exports, for now</div></div>
+          <div class="dec"><span class="n">2</span><h3>AI reads the receipt; a simple rule picks the category</h3><p>AI reads merchant, amount and date. A lookup table assigns one of five categories; unknown merchants are picked by hand. Free, easy to explain, and it never makes up an answer.</p><div class="gave"><b>Gave up</b>Smarter AI categorization</div></div>
+          <div class="dec"><span class="n">3</span><h3>A targeted launch, not a public one</h3><p>Reach 5 businesses through accountant intros and sales calls, backed by an email, a blog post and a help article.</p><div class="gave"><b>Gave up</b>A full public campaign</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-sec">
+      <div class="c-label"><h2>What I'd test next</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <p>Before building it for real, I'd interview 10 field-service managers. Is this a real problem for them, and would they pay to solve it?</p>
+        <div class="ten">
+          <div class="dots" aria-hidden="true"><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i><i class="y"></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="dots-legend"><span><b>5 of 10</b> say yes to both</span><span>Fewer: don't build it as it is</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="c-sec">
+      <div class="c-label"><h2>Honest label</h2><span class="scales"><i></i><i></i></span></div>
+      <div class="c-body">
+        <div class="honest"><svg class="i"><use href="#i-shield"/></svg><p>A course project. Nothing worked for real and no real users tried it. I'm not fully happy with it: we never had clear positioning, and we tried to combine two hard problems without one story tying them together. Next time I'd pick one problem and build the whole story around it.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-end">
+    <a class="btn primary" href="assets/case-studies/inpocket-case-study.pdf" target="_blank" rel="noopener"><svg class="i"><use href="#i-file"/></svg>Full case study (PDF)</a>
+    <a class="btn" href="#dictionary">Next: Arabic meaning search <svg class="i"><use href="#i-arrow"/></svg></a>
+  </div>
+</article>
+
+<footer class="wrap">Designed and built by Maram</footer>
+
+</body>
+</html>
