@@ -17,6 +17,7 @@
   --muted:#5f697b;
   --blue:#0b6fe0;
   --blue-soft:#e7f1ff;
+  --blue-deep:#0a3fc9;
   --on-blue:#ffffff;
   --teal:#0d8b78;
   --teal-soft:#e2f5f1;
@@ -31,13 +32,13 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#080a0f; --soft:#10151f; --line:#1f2737; --fg:#edf2fa; --muted:#8e99ae;
-    --blue:#3ba4ff; --blue-soft:#0f2340; --on-blue:#04111f; --teal:#3ad3b9; --teal-soft:#0d2a27;
+    --blue:#3ba4ff; --blue-deep:#2f6dff; --blue-soft:#0f2340; --on-blue:#04111f; --teal:#3ad3b9; --teal-soft:#0d2a27;
     --edge:#34415e; color-scheme: dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#080a0f; --soft:#10151f; --line:#1f2737; --fg:#edf2fa; --muted:#8e99ae;
-  --blue:#3ba4ff; --blue-soft:#0f2340; --on-blue:#04111f; --teal:#3ad3b9; --teal-soft:#0d2a27;
+  --blue:#3ba4ff; --blue-deep:#2f6dff; --blue-soft:#0f2340; --on-blue:#04111f; --teal:#3ad3b9; --teal-soft:#0d2a27;
   --edge:#34415e; color-scheme: dark;
 }
 
@@ -57,18 +58,25 @@ section{padding-block:88px}
 section.flush{padding-top:0}
 [lang="ar"]{font-family:var(--font-ar)}
 
-/* ---------- section heading: title + two wing scales ---------- */
+/* ---------- section heading: title + small butterfly mark ---------- */
 .h2{display:flex;flex-direction:column;gap:12px}
 .h2 h2{font-size:clamp(1.6rem,3vw,2rem);font-weight:700;letter-spacing:-.02em}
-.scales{display:flex;gap:5px}
-.scales i{width:9px;height:9px;transform:rotate(45deg);border-radius:2px;background:var(--blue)}
-.scales i+i{background:var(--teal)}
+.nb{white-space:nowrap}  /* keeps the mark on the same line as the last word */
+.mark{display:inline-block;width:.62em;height:.5em;margin-left:.06em;vertical-align:.5em;transform:scaleX(-1)}  /* top-right of the last letter, mirrored to lean on it */
 .head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:40px}
 
 /* ---------- header ---------- */
 .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:750;font-size:1.25rem;text-decoration:none;letter-spacing:-.02em}
-.logo .scales i{width:8px;height:8px}
+/* logo: light and dark versions, shown by theme */
+.logo-mark{display:block;height:38px;width:auto}
+.logo-dark{display:none}
+:root[data-theme="dark"] .logo-light{display:none}
+:root[data-theme="dark"] .logo-dark{display:block}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .logo-light{display:none}
+  :root:not([data-theme="light"]) .logo-dark{display:block}
+}
 .nav{display:flex;align-items:center;gap:26px}
 .nav a{text-decoration:none;font-size:.95rem;font-weight:500;color:var(--muted)}
 .nav a:hover{color:var(--fg)}
@@ -211,6 +219,7 @@ footer{padding-block:26px;text-align:center;font-size:.85rem;color:var(--muted)}
 
 /* ---------- case study views ---------- */
 .case{padding-block:16px 96px}
+.case h1:focus{outline:none}  /* focused by the router for screen readers; no visible ring needed */
 .back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:.92rem;color:var(--muted)}
 .back:hover{color:var(--blue)}
 .back svg.i{width:18px;height:18px}
